@@ -151,11 +151,10 @@
                           <p class="text-[#1E1510] font-passeroOne mr-2 md:mr-3">0xaa86d4542969389b57936be83e5c888de001a95e</p>
 
                           <img src="/images/copy (1).png" alt="" class="w-[12px]">
-                          <!-- <button onClick={() => { setCopied(!copied); copyLink() }}>
-                            {
-                              copied ? <MdLibraryAddCheck class="text-[10px] md:text-[12px] xl:text-[13px] cursor-pointer text-[#1E1510]" /> :
-                                <FiCopy class="text-[10px] md:text-[12px] xl:text-[13px] cursor-pointer text-[#1E1510]" />
-                            }
+                          <!-- <button id="copyButton" class="">
+                            <svg id="copyIcon" class="w-5 h-5 text-[#1E1510]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path id="copyIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v2.17m0 0h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2.17"></path>
+                            </svg>
                           </button> -->
                         </div>
                       </div>
@@ -727,6 +726,8 @@
 
 
       <script>
+
+        // Tokenomics copy icon
         const copyButton = document.getElementById('copyButton');
         const copyIcon = document.getElementById('copyIcon');
         const copyIconPath = document.getElementById('copyIconPath');

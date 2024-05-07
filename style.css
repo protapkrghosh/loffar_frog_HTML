@@ -16,7 +16,7 @@ body {
    background: #0f0906;
 }
 
-.font-pantonRustHeavy{
+.font-pantonRustHeavy {
    font-family: "Panton Rust Heavy";
 }
 
@@ -27,7 +27,7 @@ body {
 /* Navbar styles */
 .nav-links a.active,
 .nav-links a:hover {
-  color: #1E1510;
-  border: 1px solid #1d140f;
-  background-color: #fcb95f;
+   color: #1E1510;
+   border: 1px solid #1d140f;
+   background-color: #fcb95f;
 }

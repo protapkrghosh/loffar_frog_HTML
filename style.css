@@ -1,0 +1,23 @@
+@import url("https://fonts.cdnfonts.com/css/panton-rust-heavy");
+@import url("https://fonts.googleapis.com/css2?family=Passero+One&display=swap");
+
+/* Reset styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #0f0906;
+}
+
+.PantonRustHeavy{
+   font-family: "Panton Rust Heavy";
+}
+
+.passeroOne {
+   font-family: "Passero One";
+}
+
+/* Navbar styles */

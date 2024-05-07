@@ -12,6 +12,7 @@
          src="https://kit.fontawesome.com/3179a557de.js"
          crossorigin="anonymous"
       ></script>
+
    </head>
 
    <body>
@@ -283,7 +284,11 @@
               <div class='xl:mt-[24px] lg:mt-[16px] mt-[12px]'>
                 <div class="flex items-center 2xl:gap-7 lg:gap-6 gap-5">
                   <p class="text-[#FBA32C] font-passeroOne 2xl:text-[26px] xl:text-[21px] lg:text-[16px] md:text-[20px] text-[13px] lg:leading-[31.2px]">CA: 0xaa86d4542969389b57936be83e5c888de001a95e</p>
-                  <img src="/images/copy.png" alt="Image" class="w-[15px]">
+                  <!-- <img src="/images/copy.png" alt="Image" class="w-[15px]"> -->
+                  <button id="copyButton" class="">
+                    <img src="/images/copy.png" alt="Image" class="w-[15px]">
+                  </button>
+
 
                   <!-- <button onClick={() => { setCopied(!copied); copyLink() }}>
                     {
@@ -722,5 +727,34 @@
       </div>
       </div>
       </div>
+
+
+
+
+      <script>
+        const copyButton = document.getElementById('copyButton');
+        const copyIcon = document.getElementById('copyIcon');
+
+        let copied = false;
+
+        const copyLink = () => {
+          if (!copied) {
+            navigator.clipboard.writeText('CA: 0xaa86d4542969389b57936be83e5c888de001a95e').then(() => {
+              alert('Copied!');
+              copied = true;
+
+              setTimeout(() => {
+                copied = false;
+              }, 2000);
+            });
+          }
+        };
+
+        copyButton.addEventListener('click', () => {
+          copyLink();
+          copyIcon.classList.toggle('text-[#FBA32C]');
+          copyIcon.classList.toggle('text-[#FBBF24]');
+        });
+      </script> 
    </body>
 </html>

@@ -32,30 +32,8 @@ body {
    background-color: #fcb95f;
 }
 
-
-
-
-@media only screen and (max-width: 370px) {
-
-
-
-   .colorTexl {
-      font-size: 7px;
-      width: fit-content;
-   }
-
-   /* .copySectionText {
-      font-size: 50px;
-      margin-right: 10px;
-   } */
-
-   .textTitle {
-      font-size: 10px;
-      margin-left: -6px;
-   }
-
-   .textTitleBorder1 {
-      font-size: 7.1px;
-      width: fit-content;
-   }
+@media only screen and (max-width: 360px) {
+  .cusMargin {
+    margin-left: -20px;
+  }
 }

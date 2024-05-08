@@ -151,7 +151,15 @@
                       <div class='flex justify-center md:justify-start -ml-10 md:-ml-6 lg:-ml-9 xl:-ml-9 2xl:-ml-12 my-[5px] md:my-3'>
                         <div class="flex justify-center items-center text-[10.2px] md:text-[13px] xl:text-[14px] border border-[#d88c28] bg-[#FBA32C] px-[5px] md:px-[11px] py-[5px] md:py-[9px] rounded-[6px] w-fit">
                           <p class="text-[#1E1510] font-passeroOne mr-2 md:mr-3">0xaa86d4542969389b57936be83e5c888de001a95e</p>
-                          <img src="/images/copy (1).png" alt="" class="w-[12px]">
+                          <!-- <img src="/images/copy (1).png" alt="" class="w-[12px]"> -->
+
+                          <button id="bannerCopyButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 32 32" fill="none">
+                              <path id="bannerCopyIconPath" d="M26.6687 12.0022H14.6687C13.196 12.0022 12.0021 13.1961 12.0021 14.6689V26.6689C12.0021 28.1416 13.196 29.3355 14.6687 29.3355H26.6687C28.1415 29.3355 29.3354 28.1416 29.3354 26.6689V14.6689C29.3354 13.1961 28.1415 12.0022 26.6687 12.0022Z" stroke="#1E1510" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                              <path id="bannerCopyIconPath" d="M6.6698 20.0023H5.33647C4.62922 20.0023 3.95095 19.7213 3.45085 19.2212C2.95075 18.7211 2.6698 18.0429 2.6698 17.3356V5.33561C2.6698 4.62837 2.95075 3.95009 3.45085 3.44999C3.95095 2.9499 4.62922 2.66895 5.33647 2.66895H17.3365C18.0437 2.66895 18.722 2.9499 19.2221 3.44999C19.7222 3.95009 20.0031 4.62837 20.0031 5.33561V6.66895" stroke="#1E1510" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
                         </div>
                       </div>
 
@@ -730,6 +738,37 @@
           menu.classList.toggle("mt-14");
           menu.classList.toggle("bg-[#da9f52]");
         } 
+
+        // Banner copy icon
+        const bannerCopyButton = document.getElementById('bannerCopyButton');
+        const bannerCopyIcon = document.getElementById('bannerCopyIcon');
+        const bannerCopyIconPath = document.getElementById('bannerCopyIconPath');
+
+        let bannerCopied = false;
+
+        const bannerCopyLink = () => {
+          if (!bannerCopied) {
+            navigator.clipboard.writeText('CA: 0xaa86d4542969389b57936be83e5c888de001a95e').then(() => {
+              // alert('Copied!');
+              bannerCopied = true;
+
+              setTimeout(() => {
+                bannerCopied = false;
+                bannerCopyIconPath.setAttribute('d', 'M26.6687 12.0022H14.6687C13.196 12.0022 12.0021 13.1961 12.0021 14.6689V26.6689C12.0021 28.1416 13.196 29.3355 14.6687 29.3355H26.6687C28.1415 29.3355 29.3354 28.1416 29.3354 26.6689V14.6689C29.3354 13.1961 28.1415 12.0022 26.6687 12.0022Z');
+                bannerCopyIcon.classList.remove('text-[#FBBF24]');
+                bannerCopyIcon.classList.add('text-[#FBA32C]');
+              }, 2000);
+            });
+          }
+        };
+
+        bannerCopyButton.addEventListener('click', () => {
+          bannerCopyLink();
+          bannerCopyIconPath.setAttribute('d', 'M5 13l4 4L19 7');
+          bannerCopyIcon.classList.remove('text-[#FBA32C]');
+          bannerCopyIcon.classList.add('text-[#FBBF24]');
+        });
+
 
 
 

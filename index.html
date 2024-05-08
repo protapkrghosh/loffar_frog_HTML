@@ -751,22 +751,23 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    var menuItems = document.querySelectorAll('.menu-item');
+        // Smooth section scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuItems = document.querySelectorAll('.menu-item');
 
-    menuItems.forEach(function(item) {
-        item.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default behavior of link click
-            var targetId = this.getAttribute('href'); // Get the target section's ID from the href attribute
-            var targetSection = document.querySelector(targetId); // Find the target section by ID
+            menuItems.forEach(function(item) {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var targetId = this.getAttribute('href');
+                    var targetSection = document.querySelector(targetId);
 
-            // Scroll to the target section smoothly
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
+                    // Scroll to the target section smoothly
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
         });
-    });
-});
 
 
 

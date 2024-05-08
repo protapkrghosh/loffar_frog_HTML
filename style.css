@@ -16,7 +16,7 @@ body {
    background: #0f0906;
 }
 
-.font-pantonRust{
+.font-pantonRust {
    font-family: "Panton Rust Heavy";
 }
 
@@ -27,13 +27,26 @@ body {
 /* Navbar styles */
 .nav-links a.active,
 .nav-links a:hover {
-  color: #1E1510;
-  border: 1px solid #1d140f;
-  background-color: #fcb95f;
+   color: #1E1510;
+   border: 1px solid #1d140f;
+   background-color: #fcb95f;
 }
 
+/* animation  */
+.fade-up {
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-up.active {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+
 @media only screen and (max-width: 360px) {
-  .cusMargin {
-    margin-left: -20px;
-  }
+   .cusMargin {
+      margin-left: -20px;
+   }
 }

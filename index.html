@@ -1,17 +1,993 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/images/loffar logo 2.png">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/loffar logo 2.png" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Loffar Frog</title>
   <script src="https://kit.fontawesome.com/3179a557de.js" crossorigin="anonymous"></script>
-</head>
 
 <body>
-  <div class="">
+  <div>
+    <!----------------------- NavBar ---------------------------->
+    <div class="sticky top-0 z-50 duration-300 pt-8">
+      <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+        <div class="w-full top-0 left-0 z-10 bg-[#FBA32C] rounded-[10px]">
+          <div class="md:flex justify-between items-center py-3 md:py-1 lg:py-3 2xl:py-5">
+            <div onclick="toggleMenu()" class="text-3xl absolute right-8 top-[52px] cursor-pointer md:hidden">
+              <img src="/images/menu.png" alt="Image" class="w-[20px] mt-[5px]">
+            </div>
 
+            <ul id="menu"
+              class="md:flex md:items-center md:py-3 pt-5 pb-7 space-x-1 space-y-4 md:space-y-0 absolute md:static md:z-auto z-[-1px] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-linear opacity-0 md:opacity-100 rounded-[5px] top-[-490px]">
+              <li>
+                <a href="#home"
+                  class="menu-item lg:text-[18px] font-passeroOne ml-[2px] xl:ml-5 md:ml-3 cursor-pointer rounded-[4px] lg:px-3 xl:px-4 md:px-2 px-4 py-[9px] md:py-[6px] lg:py-[9px] 2xl:py-[13px] border bg-[#fcb95f] border-[#1E1510] duration-200">Home</a>
+              </li>
+              <li>
+                <a href="#about"
+                  class="menu-item lg:text-[18px] font-passeroOne duration-300 cursor-pointer rounded-[4px] lg:px-3 xl:px-4 md:px-2 px-4 py-[9px] md:py-[6px] lg:py-[9px] 2xl:py-[13px] border border-transparent hover:bg-[#fcb95f] hover:border-[#1E1510] ">About</a>
+              </li>
+              <li>
+                <a href="#tokenomics"
+                  class="menu-item lg:text-[18px] font-passeroOne duration-300 cursor-pointer rounded-[4px] lg:px-3 xl:px-4 md:px-2 px-4 py-[9px] md:py-[6px] lg:py-[9px] 2xl:py-[13px] border border-transparent hover:bg-[#fcb95f] hover:border-[#1E1510] ">Tokenomics</a>
+              </li>
+              <li>
+                <a href="#roadmap"
+                  class="menu-item lg:text-[18px] font-passeroOne duration-300 cursor-pointer rounded-[4px] lg:px-3 xl:px-4 md:px-2 px-4 py-[9px] md:py-[6px] lg:py-[9px] 2xl:py-[13px] border border-transparent hover:bg-[#fcb95f] hover:border-[#1E1510] ">Roadmap</a>
+              </li>
+              <li>
+                <a href="#faq"
+                  class="menu-item lg:text-[18px] font-passeroOne duration-300 cursor-pointer rounded-[4px] lg:px-3 xl:px-4 md:px-2 px-4 py-[9px] md:py-[6px] lg:py-[9px] 2xl:py-[13px] border border-transparent hover:bg-[#fcb95f] hover:border-[#1E1510] ">Faq</a>
+              </li>
+
+
+              <!-- Small device action button -->
+              <div class="block md:hidden">
+                <div class="">
+                  <div class="flex gap-[16px] lg:mr-0 md:mr-3">
+                    <a href="" target="_blank"
+                      class="text-[#1E1510] p-2 2xl:p-3 border border-[#1E1510] hover:bg-[#fcb95f] rounded-[5px] duration-300 w-[44px]">
+                      <img src="/images/twitter.png" alt="Image">
+                    </a>
+                    <a href="" target="_blank"
+                      class="text-[#1E1510] p-2 2xl:p-3 border border-[#1E1510] hover:bg-[#fcb95f] rounded-[5px] duration-300 w-[44px]">
+                      <img src="/images/telegram (1).png" alt="Image">
+                    </a>
+                    <a href="" target="_blank"
+                      class="text-[#1E1510] p-2 2xl:p-3 border border-[#1E1510] hover:bg-[#fcb95f] rounded-[5px] duration-300 w-[44px]">
+                      <img src="/images/github (1).png" alt="Image">
+                    </a>
+                  </div>
+
+
+                  <div class="mr-10 mt-5">
+                    <button
+                      class="bg-[#fcb95f] hover:bg-[#eeae59] text-[#1E1510] rounded-[4px] border border-[#1E1510] text-[16px] font-passeroOne font-normal px-5 py-[9px] xl:mr-4 md:mr-3 mb-2 uppercase w-full">Sign
+                      in</button>
+
+                    <button
+                      class="bg-[#fcb95f] hover:bg-[#eeae59] text-[#1E1510] rounded-[4px] border border-[#1E1510] text-[16px] font-passeroOne font-normal px-5 py-[9px] lg:mr-5 md:mr-3 uppercase w-full">Log
+                      in</button>
+                  </div>
+                </div>
+              </div>
+
+            </ul>
+
+            <a href="" class="md:hidden lg:block cursor-pointer flex items-center">
+              <img src="/images/loffar logo 2.png" alt="Logo" class="w-[45px] 2xl:w-[50px] ml-5 md:ml-0" />
+            </a>
+
+            <div class="md:block hidden">
+              <div class="flex items-center">
+                <div class="flex gap-[16px] lg:mr-0 md:mr-3">
+                  <a href="" target="_blank"
+                    class="text-[#1E1510] p-2 2xl:p-3 border border-[#1E1510] hover:bg-[#fcb95f] rounded-[5px] duration-300 w-[33px] lg:w-[44px]">
+                    <img src="/images/twitter.png" alt="Image">
+                  </a>
+                  <a href="" target="_blank"
+                    class="text-[#1E1510] p-2 2xl:p-3 border border-[#1E1510] hover:bg-[#fcb95f] rounded-[5px] duration-300 w-[33px] lg:w-[44px]">
+                    <img src="/images/telegram (1).png" alt="">
+                  </a>
+                  <a href="" target="_blank"
+                    class="text-[#1E1510] p-2 2xl:p-3 border border-[#1E1510] hover:bg-[#fcb95f] rounded-[5px] duration-300 w-[33px] lg:w-[44px]">
+                    <img src="/images/github (1).png" alt="">
+                  </a>
+                </div>
+                <div
+                  class="hidden lg:block h-[1px] 2xl:w-[91px] w-[75px] bg-[#1E1510] opacity-70 rotate-90 xl:-mx-4 md:-mx-7">
+                </div>
+
+                <button
+                  class="bg-[#fcb95f] hover:bg-[#eeae59] text-[#1E1510] rounded-[4px] border border-[#1E1510] text-[16px] font-passeroOne font-normal px-3 xl:px-5 py-[9px] md:py-[4px] lg:py-[9px] xl:mr-4 md:mr-3 uppercase">Sign
+                  in</button>
+
+                <button
+                  class="bg-[#fcb95f] hover:bg-[#eeae59] text-[#1E1510] rounded-[4px] border border-[#1E1510] text-[16px] font-passeroOne font-normal px-3 xl:px-5 py-[9px] md:py-[4px] lg:py-[9px] xl:mr-5 md:mr-3 uppercase">Log
+                  in</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!----------------------- Banner Section ---------------------------->
+    <div>
+      <div>
+        <div id="home">
+          <img src="/images/Rectangle.png" alt="Image"
+            class="h-[1000px] lg:h-[1150px]  xl:h-[1150px] 2xl:h-[1300px] w-full mt-[-130px] 2xl:mt-[-135px] -mb-[800px] lg:-mb-[950px] xl:-mb-[928px] 2xl:-mb-[1050px] hidden lg:block" />
+
+          <div class="mt-14 lg:mt-0 mb-[200px] md:mb-[235px]">
+            <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+              <div class="lg:flex justify-between items-center gap-x-[35px] xl:gap-x-[91px]">
+                <div class="lg:w-[60%] xl:w-[50%] 2xl:w-[40%]">
+                  <div class="relative">
+                    <img src="/images/Group.png" alt="Image"
+                      class="h-[700px] md:h-[860px] lg:h-[840px] xl:h-[820px] 2xl:h-[820px] md:w-[550px] lg:w-auto scale-110 xl:scale-105 2xl:scale-110 mx-auto lg:mx-0" />
+
+                    <div
+                      class="absolute bottom-[60px] md:bottom-[55px] lg:bottom-[48px] xl:bottom-[40px] 2xl:bottom-[25px] left-[65px] md:left-[170px] lg:left-[100px] xl:left-[90px] 2xl:left-[95px] cusMargin">
+                      <p
+                        class="text-[#1E1510] text-[12px] md:text-[15px] font-pantonRust font-extrabold leading-[19px] proportional-nums">
+                        Presale Ends in:</p>
+                      <p
+                        class="text-[#1E1510] text-[9.5px] md:text-[14px] lg:text-[13px] xl:text-[14px] font-passeroOne leading-[16px] mt-1 md:mt-[9px] mb-[5px] md:mb-[11px]">
+                        Token Will Be On Raydium My 1fst 2024</p>
+
+                      <!-- Timers -->
+                      <div
+                        class="relative w-[175px] md:w-[245px] 2xl:w-[260px] bg-[#FBA32C] py-[25px] md:py-[30px] px-[10px] rounded-[8px] -ml-[7px] md:-ml-[10px] lg:-ml-[18px] xl:-ml-15px] 2xl:-ml-[18px]">
+                        <div
+                          class="absolute left-[10px] md:left-[19px] lg:left-[28px] xl:left-[22px] 2xl:left-[20px] top-[8px] md:top-[10px] space-x-[30px] md:space-x-[40px] 2xl:space-x-[45px] text-[#1E1510] font-semibold font-pantonRust text-[12px] md:text-[16px] lg:text-[15px] xl:text-[15.99px]">
+                          <span>12</span>
+                          <span>08</span>
+                          <span>02</span>
+                          <span>32</span>
+                        </div>
+
+                        <div
+                          class="absolute left-[37px] md:left-[56px] lg:left-[65px] xl:left-[60px] top-[8px] md:top-[10px] space-x-[42px] md:space-x-[57px] lg:space-x-[53px] 2xl:space-x-[61px] text-[#1E1510] font-semibold font-pantonRust text-[12px] md:text-[15px]">
+                          <span>:</span>
+                          <span>:</span>
+                          <span>:</span>
+                        </div>
+
+                        <div
+                          class="absolute left-[12px] md:left-[24px] lg:left-[30px] xl:left-[25px] top-[30px] md:top-[40px] space-x-[31px] md:space-x-[46px] 2xl:space-x-[51px] text-[#1E1510] font-passeroOne text-[8.6px]">
+                          <span>Day</span>
+                          <span>Hrs</span>
+                          <span>Mins</span>
+                          <span>Sec</span>
+                        </div>
+                      </div>
+
+
+                      <div>
+                        <p
+                          class="colorTexl bg-[#efc79b] text-[#1E1510] text-center text-[10px] md:text-[13px] xl:text-[14px] font-passeroOne leading-[16px] tracking-[0.56px] rounded-[6px] pr-1 md:pr-3 py-[3px] md:py-[6px] mt-[10px] md:mt-[18px] mb-2 md:mb-3 -ml-6 lg:-ml-9 xl:-ml-9 2xl:-ml-12 w-fit capitalize">
+                          <span class="bg-[#FBA32C] pl-1 md:pl-3 pr-[5px] py-[5px] md:py-[8px] rounded-[6px]">over 2
+                            Million</span> Contribution Received and Growing
+                        </p>
+
+                        <p
+                          class="text-[#624737] text-[12px] md:text-[17px] xl:text-[18px] font-pantonRust font-medium leading-[21px] ml-4 lg:ml-3 xl:ml-4 2xl:ml-0">
+                          Send Sol To This Wallet</p>
+
+                        <!-- Copied text -->
+                        <div
+                          class='flex justify-center md:justify-start -ml-10 md:-ml-6 lg:-ml-9 xl:-ml-9 2xl:-ml-12 my-[5px] md:my-3'>
+                          <div
+                            class="flex justify-center items-center text-[10.2px] md:text-[13px] xl:text-[14px] border border-[#d88c28] bg-[#FBA32C] px-[5px] md:px-[11px] py-[5px] md:py-[9px] rounded-[6px] w-fit">
+                            <p class="text-[#1E1510] font-passeroOne mr-2 md:mr-3">
+                              0xaa86d4542969389b57936be83e5c888de001a95e</p>
+                            <!-- <img src="/images/copy (1).png" alt="" class="w-[12px]"> -->
+
+                            <button id="bannerCopyButton">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 32 32"
+                                fill="none">
+                                <path id="bannerCopyIconPath"
+                                  d="M26.6687 12.0022H14.6687C13.196 12.0022 12.0021 13.1961 12.0021 14.6689V26.6689C12.0021 28.1416 13.196 29.3355 14.6687 29.3355H26.6687C28.1415 29.3355 29.3354 28.1416 29.3354 26.6689V14.6689C29.3354 13.1961 28.1415 12.0022 26.6687 12.0022Z"
+                                  stroke="#1E1510" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+                                <path id="bannerCopyIconPath"
+                                  d="M6.6698 20.0023H5.33647C4.62922 20.0023 3.95095 19.7213 3.45085 19.2212C2.95075 18.7211 2.6698 18.0429 2.6698 17.3356V5.33561C2.6698 4.62837 2.95075 3.95009 3.45085 3.44999C3.95095 2.9499 4.62922 2.66895 5.33647 2.66895H17.3365C18.0437 2.66895 18.722 2.9499 19.2221 3.44999C19.7222 3.95009 20.0031 4.62837 20.0031 5.33561V6.66895"
+                                  stroke="#1E1510" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <p
+                          class="textTitle text-[#624737] text-[12px] md:text-[17px] xl:text-[18px] font-pantonRust font-medium leading-[21px] -ml-[2px] md:-ml-[4px] lg:-ml-[15px] xl:-ml-3 2xl:-ml-6">
+                          HOW TO PARTICIPATE IN PRESALE</p>
+
+                        <div
+                          class="text-[#1E1510] text-[8.5px] md:text-[12px] xl:text-[13px] 2xl:text-[14px] text-center font-passeroOne leading-[16px] tracking-[0.56px] capitalize mt-[8px] mb-[12px] -ml-[35px] md:-ml-[45px] lg:-ml-[58px] xl:-ml-[55px] 2xl:-ml-[75px]">
+                          <p class="bg-[#efc69b91] border-[0.5px] border-[#EDBB8D] rounded-[6px] py-[4px] md:py-[6px]">
+                            Send Sol to our provided wallet.</p>
+
+                          <p
+                            class="bg-[#efc69b91] border-[0.5px] border-[#EDBB8D] rounded-[6px] py-[4px] md:py-[6px] my-[3px] md:my-[6px]">
+                            Minimum: 0.50 Sol and Maximum 150 Sol From A Single Wallet.</p>
+
+                          <p class="bg-[#efc69b91] border-[0.5px] border-[#EDBB8D] rounded-[6px] py-[4px] md:py-[6px]">
+                            tokens will be airdropped to the sending wallet.</p>
+
+                          <p
+                            class="bg-[#FBA32C] border-[0.6px] border-[#d88c28] rounded-[6px] md:px-3 2xl:px-[10px] py-[4px] md:py-[6px] mt-[6px] md:mt-3 lg:mt-2 xl:mt-3">
+                            NB: Don't use a Exchange to send SOL! Use your own wallet..</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Banner Content -->
+                <div class="lg:w-[40%] xl:w-[50%] 2xl:w-[60%] mt-10 md:mt-20 lg:mt-0">
+                  <h3
+                    class="text-[19px] md:text-[32px] lg:text-[27px] xl:text-[40px] 2xl:text-[60px] text-[#FBA32C] text-center lg:text-start font-pantonRust leading-[50px] md:leading-[72px] tracking-[1.2px] fade-up delay-100">
+                    Welcome to</h3>
+
+                  <h1
+                    class="text-[30px] md:text-[60px] lg:text-[48px] xl:text-[77px] 2xl:text-[116px] text-[#FBA32C] text-center lg:text-start font-pantonRust 2xl:leading-[150px] tracking-[2.5px] -mt-3 2xl:mt-[8px] fade-up delay-300">
+                    Loffar frog</h1>
+
+                  <p
+                    class="lg:text-[15px] xl:text-[15px] 2xl:text-[24px] text-[#B2ACA8]  text-center lg:text-start font-passeroOne leading-[25px] xl:leading-[35px] 2xl:leading-[40px] tracking-[0.48px] mt-3 md:mt-0 lg:mt-[15px] xl:mt-0 2xl:mt-[24px] mb-[40px] 2xl:mb-[50px] xl:w-[95%] 2xl:w-full fade-up delay-500">
+                    Where imagination leaps beyond boundaries, crafting worlds
+                    of whimsy and wonder. Dive into our pond of creativity and join the adventure today!</p>
+
+                  <div class="flex justify-center lg:justify-normal">
+                    <div class="space-y-3 md:space-x-5 lg:space-x-1 xl:space-x-7">
+                      <button
+                        class='border border-[#FBA32C] hover:bg-[#fba12c15] text-[#FBA32C] font-passeroOne text-[13px] xl:text-[15px] 2xl:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] px-[20px] lg:px-3 xl:px-[20px] 2xl:px-[24px] py-3 lg:py-1 xl:py-2 2xl:py-[12px] duration-100 w-full md:w-auto'>BUY
+                        ON OKX</button>
+
+                      <button
+                        class='border border-[#FBA32C] hover:bg-[#fba12c15] text-[#FBA32C] font-passeroOne text-[13px] xl:text-[15px] 2xl:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] px-[20px] lg:px-3 xl:px-[20px] 2xl:px-[24px] py-3 lg:py-1 xl:py-2 2xl:py-[12px] duration-100 w-full md:w-auto'>BUY
+                        ON MEXC</button>
+
+                      <button
+                        class='border border-[#FBA32C] hover:bg-[#fba12c15] text-[#FBA32C] font-passeroOne text-[13px] xl:text-[15px] 2xl:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] md:px-[20px] lg:px-3 xl:px-[20px] 2xl:px-[24px] py-3 lg:py-1 xl:py-2 2xl:py-[12px] duration-100 w-full md:w-auto'>BUY
+                        ON UNISWAP</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!----------------------- About US Section ---------------------------->
+      <div id="about">
+        <div class='h-[30px] w-full mt-[-130px] 2xl:mt-[-5px] bg-[#FBA32C]'></div>
+        <div class=' xl:mt-[180px] lg:mt-[145px] md:mt-[90px] mt-[60px]'>
+          <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+
+            <div class='flex items-center flex-col-reverse lg:flex-row lg:space-x-4'>
+              <div class='lg:w-[60%]'>
+
+                <p
+                  class='text-[#B2ACA8] lg:text-start text-center xl:text-[24px] lg:text-[20px] md:text-[16px] text-[12px] font-passeroOne xl:leading-[40.8px] lg:leading-[30.8px] md:leading-[22.8px] tracking-[0.48px] lg:mb-[16px] md:mb-[14px] mb-[12px] fade-up delay-100'>
+                  Welcome to Loffar Frog, where imagination meets innovation.
+                  As
+                  the whimsical minds behind the scenes, we're dedicated to crafting delightful experiences that enchant
+                  and
+                  inspire. </p>
+
+                <p
+                  class='2xl:w-[95%] text-[#B2ACA8] lg:text-start text-center xl:text-[24px] lg:text-[20px] md:text-[16px] text-[12px] font-passeroOne xl:leading-[40.8px] lg:leading-[30.8px] md:leading-[22.8px] lg:mb-[40px] md:mb-[24px] mb-[18px] fade-up delay-300'>
+                  With a playful approach to design and a commitment to
+                  excellence, we hop into every project with boundless enthusiasm. Dive into our world of creativity and
+                  let
+                  Loffar Frog redefine the art of storytelling. Join us on this adventure, where every leap brings us
+                  closer
+                  to new horizons.</p>
+
+                <div class='md:space-x-6 space-x-3 lg:text-start text-center fade-up delay-500'>
+                  <button
+                    class='bg-[#FBA32C] hover:bg-transparent border border-[#FBA32C] text-[#1E1510] hover:text-[#FBA32C] font-passeroOne md:text-[24px] text-[16px] lg:leading-[38.4px] lg:tracking-[0.48px] rounded-[8px] md:px-[24px] px-[18px] md:py-[12px] py-[8px] duration-300'>BUY
+                    Now</button>
+
+                  <button
+                    class='border border-[#FBA32C] bg-[#1E1510] hover:bg-[#FBA32C] text-[#FBA32C] hover:text-[#1E1510] font-passeroOne md:text-[24px] text-[16px] lg:leading-[38.4px] lg:tracking-[0.48px] rounded-[8px] md:px-[24px] px-[18px] md:py-[12px] py-[8px] duration-300'>Learn
+                    More</button>
+                </div>
+              </div>
+
+              <div class='lg:w-[40%] lg:mt-0 mt-[50px]'>
+                <img class='lg:ml-[50px] lg:w-auto w-[80%] mx-auto' src='./images/Group 1171275373.png' alt="image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!----------------------- Tokenomics Section ---------------------------->
+      <div>
+        <div class='xl:mt-[200px] lg:mt-[150px] md:mt-[80px] mt-[60px]' id="tokenomics">
+          <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+            <p
+              class='text-[#FBA32C] font-pantonRust font-medium 2xl:text-[115px] xl:text-[85px] lg:text-[65px] md:text-[60px] text-[30px] lg:leading-[138px] tracking-[2.3px] text-center lg:mb-[100px] md:mb-[50px] mb-[20px] fade-up delay-300'>
+              TOKENOMICS</p>
+
+            <!-- tokenomics contain section -->
+            <div class='lg:flex items-center relative'>
+
+              <!-- tokenomics left text section -->
+              <div
+                class='lg:w-[50%] bg-[#342114] rounded-[32px] 2xl:p-[40px] xl:p-[30px] lg:p-[20px] md:p-[30px] p-[15px]'>
+
+                <p
+                  class='text-[#FBA32C] font-pantonRust xl:text-[40px] lg:text-[30px] md:text-[28px] text-[20px] lg:leading-[48px] lg:tracking-[0.4px] xl:mb-[24px] lg:mb-[18px] md:mb-[14px] mb-[10px] fade-up delay-500'>
+                  NO TAX. NO NONSENSE</p>
+
+                <p
+                  class='text-[#B2ACA8] font-passeroOne 2xl:text-[20px] xl:text-[17px] lg:text-[15px] md:text-[14px] text-[12px] xl:leading-[32px] lg:leading-[24px] capitalize lg:mb-[16px] md:mb-[12px] mb-[10px]'>
+                  In the magical realm, the $KEKE project has transformed. 92.3% tokens are in liquidity pool, LP tokens
+                  burnt, and contract renounced. The remaining 7.7% resides in a multi-sig wallet for future centralized
+                  exchange listings and liquidity pools, </p>
+
+                <p
+                  class='text-[#B2ACA8] font-passeroOne 2xl:text-[20px] xl:text-[17px] lg:text-[15px] md:text-[14px] text-[12px] xl:leading-[32px] lg:leading-[24px] capitalize lg:mb-[24px] md:mb-[20px] mb-[12px]'>
+                  trackable via the blockchain. KEK, bestows prosperity on its followers with zero taxes for $KEKE
+                  transactions. The economy thrives with KEK’s guidance and the faithful reap the rewards.</p>
+
+                <div class='flex lg:gap-[88px] md:gap-[30px] gap-[24px]'>
+                  <div>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne 2xl:text-[20px] xl:text-[18px] lg:text-[16px] text-[16px] lg:leading-[32px] lg:tracking-[0.4px] lg:mb-[-16px]'>
+                      TOTALL SUPPLY</p>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne 2xl:text-[44px] xl:text-[40px] lg:text-[30px] md:text-[25px] text-[22px] lg:leading-[70.4px] lg:tracking-[0.88px] capitalize'>
+                      100000000000</p>
+                  </div>
+                  <div>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne 2xl:text-[20px] xl:text-[18px] lg:text-[16px] text-[16px] lg:leading-[32px] lg:tracking-[0.4px] lg:mb-[-16px]'>
+                      TOKEN TICKER</p>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne 2xl:text-[44px] xl:text-[40px] lg:text-[30px] md:text-[25px] text-[22px] lg:leading-[70.4px] lg:tracking-[0.88px] capitalize'>
+                      $FROG</p>
+                  </div>
+                </div>
+
+                <!-- Copied text -->
+                <div class='xl:mt-[24px] lg:mt-[16px] mt-[12px]'>
+                  <div class="flex items-center 2xl:gap-7 lg:gap-6 gap-5">
+                    <p
+                      class="text-[#FBA32C] font-passeroOne 2xl:text-[26px] xl:text-[21px] lg:text-[16px] md:text-[20px] text-[13px] lg:leading-[31.2px]">
+                      CA: 0xaa86d4542969389b57936be83e5c888de001a95e</p>
+                    <!-- <img src="/images/copy.png" alt="Image" class="w-[15px]"> -->
+
+                    <button id="copyButton">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none">
+                        <path id="copyIconPath"
+                          d="M26.6687 12.0022H14.6687C13.196 12.0022 12.0021 13.1961 12.0021 14.6689V26.6689C12.0021 28.1416 13.196 29.3355 14.6687 29.3355H26.6687C28.1415 29.3355 29.3354 28.1416 29.3354 26.6689V14.6689C29.3354 13.1961 28.1415 12.0022 26.6687 12.0022Z"
+                          stroke="#FBA32C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+                        <path id="copyIconPath"
+                          d="M6.6698 20.0023H5.33647C4.62922 20.0023 3.95095 19.7213 3.45085 19.2212C2.95075 18.7211 2.6698 18.0429 2.6698 17.3356V5.33561C2.6698 4.62837 2.95075 3.95009 3.45085 3.44999C3.95095 2.9499 4.62922 2.66895 5.33647 2.66895H17.3365C18.0437 2.66895 18.722 2.9499 19.2221 3.44999C19.7222 3.95009 20.0031 4.62837 20.0031 5.33561V6.66895"
+                          stroke="#FBA32C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Tokenomics right img section -->
+
+              <div class='lg:w-[50%] 2xl:ml-[-35px] xl:ml-[-20px]'>
+
+                <img class='2xl:w-auto xl:w-[86%] lg:w-[80%] md:w-[76%] w-[68%]' src="images/Group 1171275346.png"
+                  alt="image" />
+
+                <!-- card 1 -->
+                <div
+                  class='absolute 2xl:top-[110px] xl:top-[114px] lg:top-[126px] md:top-[445px] top-[345px] 2xl:right-[-10px] xl:right-[10px] lg:right-[10px] md:right-[105px] right-[70px]'>
+                  <p
+                    class='text-[#B2ACA8] font-passeroOne 2xl:text-[24px] xl:text-[22px] md:text-[18px] text-[12px] xl:leading-[40.8px] lg:leading-[5.8px] lg:tracking-[0.48px]'>
+                    Public sell</p>
+                  <p
+                    class='text-[#FBA32C] font-pantonRust 2xl:text-[47px] xl:text-[40px] md:text-[28px] text-[20px] font-medium lg:leading-[56.4px] lg:tracking-[0.47px]'>
+                    50%</p>
+                </div>
+
+                <!-- card 2 -->
+                <div
+                  class='absolute 2xl:top-[280px] xl:top-[240px] lg:top-[215px] md:top-[575px] top-[408px] 2xl:right-[-60px] xl:right-[-22px] lg:right-[-5px] md:right-[80px] right-[55px]'>
+                  <p
+                    class='text-[#B2ACA8] font-passeroOne 2xl:text-[24px] xl:text-[22px] md:text-[18px] text-[12px] xl:leading-[40.8px] lg:leading-[5.8px] lg:tracking-[0.48px]'>
+                    Airdrop</p>
+                  <p
+                    class='text-[#FE7339] font-pantonRust 2xl:text-[47px] xl:text-[40px] md:text-[28px] text-[20px] font-medium lg:leading-[56.4px] lg:tracking-[0.47px]'>
+                    05%</p>
+                </div>
+
+                <!-- card 3 -->
+                <div
+                  class='absolute 2xl:top-[430px] xl:top-[355px] lg:top-[300px] md:top-[700px] top-[467px] 2xl:right-[20px] xl:right-[34px] lg:right-[35px] md:right-[145px] right-[85px]'>
+                  <p
+                    class='text-[#B2ACA8] font-passeroOne 2xl:text-[24px] xl:text-[22px] md:text-[18px] text-[12px] xl:leading-[40.8px] lg:leading-[5.8px] lg:tracking-[0.48px]'>
+                    Presale</p>
+                  <p
+                    class='text-[#75C70E] font-pantonRust 2xl:text-[47px] xl:text-[40px] md:text-[28px] text-[20px] font-medium lg:leading-[56.4px] lg:tracking-[0.47px]'>
+                    45%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--------------------- Roadmap Section -------------------------->
+      <div>
+        <div class='xl:mt-[200px] lg:mt-[214px] md:mt-[90px] mt-[60px]' id="roadmap">
+          <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+            <!-- ------------- roadmap text -------------- -->
+            <div>
+              <p
+                class='text-[#FBA32C] lg:text-start text-center font-pantonRust font-medium 2xl:text-[115px] xl:text-[85px] lg:text-[65px] md:text-[60px] text-[30px] lg:leading-[138px] lg:tracking-[2.3px] xl:mb-[8px] md:mb-[8px] mb-[6px] fade-up delay-500'>
+                ROADMAP</p>
+
+              <p
+                class='text-[#B2ACA8] lg:text-start text-center font-passeroOne lg:text-[20px] md:text-[16px] lg:leading-[34px] lg:tracking-[0.4px] lg:w-[42%] lg:px-0 md:px-5 px-3 fade-up delay-700'>
+                The $KEKE project's roadmap includes enhancing liquidity,
+                expanding exchange listings, integrating NFTs, and fostering community engagement through gamification
+                and
+                partnerships.</p>
+            </div>
+
+
+            <!-- ---------- roadmap contents and images ----------- -->
+            <div>
+              <!-- images  -->
+              <div class='hidden lg:block xl:mt-[-245px] lg:mt-[-140px]'>
+                <img class='2xl:w-[93%] xl:w-[90%] lg:w-[82%] mx-auto' src='./images/Group 1171275336.png'
+                  alt="image" />
+              </div>
+
+              <!-- ------------- Large Device ----------- -->
+              <!-- text  -->
+              <div class='hidden lg:block lg:mt-0 md:mt-[14px] relative'>
+
+                <!-- ------------ card 1 ------------ -->
+                <div class='2xl:ml-[155px] xl:ml-[140px] lg:ml-[135px] 2xl:mt-[24px] xl:mt-[25px] lg:mt-[25px]'>
+                  <p
+                    class='text-[#FBA32C] font-pantonRust font-medium text-[30px] lg:leading-[36px] lg:tracking-[0.3px] lg:mb-[16px]'>
+                    PHASE 1</p>
+
+                  <div class='flex items-center md:gap-4 lg:mb-[22px]'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      Uniswap
+                      Launch</p>
+                  </div>
+
+                  <div class='flex items-center md:gap-4 lg:mb-[22px]'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      1,000+
+                      Holders</p>
+                  </div>
+
+                  <div class='flex items-center md:gap-4'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      CoinGecko/Coinmarketcap</p>
+                  </div>
+
+                </div>
+
+                <!-- ---------- card 2 ------------- -->
+                <div class='2xl:ml-[715px] xl:ml-[586px] lg:ml-[455px] 2xl:mt-[-337px] xl:mt-[-305px] lg:mt-[-270px]'>
+                  <p
+                    class='text-[#FBA32C] font-pantonRust font-medium text-[30px] lg:leading-[36px] lg:tracking-[0.3px] lg:mb-[16px]'>
+                    PHASE 2</p>
+
+                  <div class='flex items-center md:gap-4 lg:mb-[22px]'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      KOL Marketing</p>
+                  </div>
+
+                  <div class='flex items-center md:gap-4 lg:mb-[22px]'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      Meme Contast</p>
+                  </div>
+
+                  <div class='flex items-center md:gap-4'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>First
+                      CEX Listing</p>
+                  </div>
+
+                </div>
+
+                <!------------- card 3 ------------- -->
+                <div
+                  class='absolute 2xl:top-[-465px] xl:top-[-380px] lg:top-[-265px] 2xl:right-[-10px] xl:right-[-25px] lg:right-[-27px]'>
+                  <p
+                    class='text-[#FBA32C] font-pantonRust font-medium text-[30px] lg:leading-[36px] lg:tracking-[0.3px] lg:mb-[16px]'>
+                    PHASE 3</p>
+
+                  <div class='flex items-center md:gap-4 lg:mb-[22px]'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      KOL Marketing</p>
+                  </div>
+
+                  <div class='flex items-center md:gap-4 lg:mb-[22px]'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      Meme Contast</p>
+                  </div>
+
+                  <div class='flex items-center md:gap-4'>
+                    <img class='lg:w-auto' src='./images/roadmap-logo.png' alt="image" />
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] lg:leading-[21.6px] tracking-[1.44px]'>
+                      First CEX Listing</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+
+
+
+
+              <!-- ---------- Small Device ---------- -->
+              <!-- {/* text */} -->
+              <div class='block lg:hidden lg:mt-0 md:mt-[45px] mt-[25px]'>
+
+                <div class='grid md:grid-cols-2 grid-cols-1 md:ml-32 ml-10'>
+
+                  <!-- ----------- card 1 ------------- -->
+                  <div class='2xl:ml-[155px] xl:ml-[130px] lg:ml-[100px] 2xl:mt-[24px] xl:mt-[25px] lg:mt-[25px]'>
+                    <p
+                      class='text-[#FBA32C] font-pantonRust font-medium md:text-[26px] text-[20px] lg:leading-[36px] lg:tracking-[0.3px] md:mb-[14px] mb-[8px]'>
+                      PHASE 1</p>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] text-[14px]'>Uniswap Launch</p>
+                    </div>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] text-[14px]'>1,000+ Holders</p>
+                    </div>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] text-[14px]'>CoinGecko/Coinmarketcap</p>
+                    </div>
+
+                  </div>
+
+                  <!------------ card 2 ------------- -->
+                  <div class='2xl:ml-[715px] xl:ml-[586px] lg:ml-[455px] 2xl:mt-[-337px] xl:mt-[-305px] lg:mt-[-270px]'>
+                    <p
+                      class='text-[#FBA32C] font-pantonRust font-medium md:text-[26px] text-[20px] lg:leading-[36px] lg:tracking-[0.3px] md:mb-[14px] mb-[8px]'>
+                      PHASE 2</p>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] text-[14px]'>KOL Marketing</p>
+                    </div>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] text-[14px]'>Meme Contast</p>
+                    </div>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne md:text-[18px] text-[14px]'>First CEX Listing</p>
+                    </div>
+
+                  </div>
+
+                  <!----------- card 3 ----------- -->
+                  <div
+                    class='2xl:ml-[1245px] xl:ml-[995px] lg:ml-[760px] 2xl:mt-[-457px] xl:mt-[-397px] lg:mt-[-345px]'>
+                    <p
+                      class='text-[#FBA32C] font-pantonRust font-medium md:text-[26px] text-[20px] lg:leading-[36px] lg:tracking-[0.3px] md:mb-[14px] mb-[8px]'>
+                      PHASE 3</p>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] text-[14px]'>KOL Marketing</p>
+                    </div>
+
+                    <div class='flex items-center md:gap-4 gap-3 md:mb-[14px] mb-[10px]'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] text-[14px]'>Meme Contast</p>
+                    </div>
+
+                    <div class='flex items-center md:gap-4 gap-3'>
+                      <img class='md:w-[6%] w-[5%]' src='./images/roadmap-logo.png' alt="image" />
+                      <p class='text-[#B2ACA8] font-passeroOne font-medium md:text-[18px] text-[14px]'>First CEX Listing
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!------------------------ FAQ Section  ------------------------------------->
+        <div>
+          <div class='my-[60px] md:my-[100px] xl:mt-[430px] lg:mt-[350px] md:mt-[100px] mt-[60px]' id='faq'>
+            <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+
+              <div
+                class='flex items-center flex-col-reverse lg:flex-row 2xl:space-x-[40px] xl:space-x-[50px] lg:space-x-[5px] gap-x-10 xl:gap-x-0'>
+
+                <!-- {/* left side */} -->
+                <div class='lg:w-[51%] mt-10 lg:mt-0'>
+                  <!-- {/* card 1 */} -->
+                  <div
+                    class='border border-[#775A34] bg-[#301F0C] px-7 py-5 xl:py-7 rounded-[16px] mb-[30px] fade-up delay-100'>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne text-[20px] xl:text-[24px] leading-[33.6px] pb-[15px] lg:pb-[12px] xl:pb-[18px] uppercase'>
+                      What is Loffar Frog?</p>
+
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne text-[15px] xl:text-[17px] 2xl:text-[18px] leading-[28.8px] capitalize xl:w-[95%]'>
+                      Loffar Frog is a creative hub where imagination takes flight. We specialize in crafting unique
+                      experiences
+                      and innovative solutions.</p>
+                  </div>
+
+                  <!-- {/* card 2 */} -->
+                  <div
+                    class='border border-[#775A34] bg-[#301F0C] px-7 py-5 xl:py-7 rounded-[16px] mb-[30px]  fade-up delay-200'>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne text-[20px] xl:text-[24px] leading-[33.6px] pb-[15px] lg:pb-[12px] xl:pb-[18px] uppercase'>
+                      How can I get involved?</p>
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne text-[15px] xl:text-[17px] 2xl:text-[18px] leading-[28.8px] capitalize xl:w-[95%]'>
+                      Joining the Loffar Frog community is easy! Simply explore our website to discover our latest
+                      projects and
+                      initiatives.</p>
+                  </div>
+
+                  <!-- {/* card 3 */} -->
+                  <div
+                    class='border border-[#775A34] bg-[#301F0C] px-7 py-5 xl:py-7 rounded-[16px] mb-[30px] fade-up delay-300'>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne text-[20px] xl:text-[24px] leading-[33.6px] lg:pb-[12px] xl:pb-[18px] uppercase'>
+                      Do you offer customization services?</p>
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne text-[15px] xl:text-[17px] 2xl:text-[18px] leading-[28.8px] capitalize xl:w-[95%]'>
+                      Yes, we love bringing unique visions to life! Contact us to discuss how we can tailor our services
+                      to meet
+                      your specific needs.</p>
+                  </div>
+
+                  <!-- {/* card 4 */} -->
+                  <div class='border border-[#775A34] bg-[#301F0C] px-7 py-5 xl:py-7 rounded-[16px] fade-up delay-500'>
+                    <p
+                      class='text-[#FBA32C] font-passeroOne text-[20px] xl:text-[24px] leading-[33.6px] pb-[15px] lg:pb-[12px] xl:pb-[18px] uppercase'>
+                      How can I stay updated on new developments?</p>
+                    <p
+                      class='text-[#B2ACA8] font-passeroOne text-[15px] xl:text-[17px] 2xl:text-[18px] leading-[28.8px] capitalize xl:w-[93%]'>
+                      Stay connected with Loffar Frog by subscribing to our newsletter and following us on social media
+                      for the
+                      latest news and updates.</p>
+                  </div>
+                </div>
+
+                <!-- {/* right side */} -->
+
+                <div class='lg:w-[49%]'>
+
+
+                  <div>
+                    <img class='lg:w-auto md:w-[90%]' src='./images/Group 1171275370.png' alt="image" />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!--------------------------- Footer Action section ----------------------------->
+        <div class='lg:mt-[160px] bg-[#1E130C]'>
+          <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+
+            <!-- {/* -- First part footer -- */} -->
+            <div class='hidden md:block'>
+              <div class='flex justify-between xl:pt-[88px] xl:pb-[70px] py-[55px]'>
+                <Link to="home">
+                <img class='w-[55px] cursor-pointer' src='./images/loffar logo 2.png' alt="image" />
+                </Link>
+
+                <div class='flex lg:gap-[32px] items-center'>
+                  <div class='flex gap-[14px] mr-6 lg:mr-0'>
+                    <a href="" target='_blank'
+                      class='text-[#F7B501] px-[14px] py-3 border border-[#F7B501] hover:bg-[#301F0C] rounded-[5px] fade-up delay-75'>
+                      <img class="w-[27px]" src="./images/twitter (1).png" alt="Image">
+                    </a>
+
+                    <a href="" target='_blank'
+                      class='text-[#F7B501] px-3 py-3 border border-[#F7B501] hover:bg-[#301F0C] rounded-[5px] fade-up delay-200'>
+                      <img class="w-[30px]" src="./images/telegram.png" alt="Image">
+                    </a>
+
+                    <a href="" target='_blank'
+                      class='text-[#F7B501] px-3 py-3 border border-[#F7B501] hover:bg-[#301F0C] rounded-[5px] fade-up delay-500'>
+                      <img class="w-[30px]" src="./images/github.png" alt="Image">
+                    </a>
+                  </div>
+
+                  <div class='space-x-6'>
+                    <button
+                      class='bg-[#FBA32C] hover:bg-transparent border border-[#FBA32C] text-[#1E1510] hover:text-[#FBA32C] font-passeroOne lg:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] px-[23px] py-[11.5px] duration-300 fade-up delay-700'>BUY
+                      ON OKX</button>
+
+                    <button
+                      class='border border-[#FBA32C] hover:bg-[#FBA32C] text-[#FBA32C] hover:text-[#1E1510] font-passeroOne lg:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] px-[24px] py-[12px] duration-300 fade-up delay-1000'>TOTALL
+                      SUPPLY</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <!-- {/* Small device action button */} -->
+            <div class='block md:hidden'>
+              <div class='xl:pt-[88px] xl:pb-[70px] py-[55px]'>
+                <div class='flex justify-between'>
+                  <Link to="home">
+                  <img class='w-[55px] cursor-pointer' src='./images/loffar logo 2.png' alt="image" />
+                  </Link>
+
+                  <div class='flex gap-[14px]'>
+                    <a href="" target='_blank'
+                      class='text-[#F7B501] px-3 py-3 border border-[#F7B501] hover:bg-[#301F0C] rounded-[5px] fade-up delay-75'>
+                      <img class="w-[30px]" src="./images/twitter (1).png" alt="">
+                    </a>
+
+                    <a href="" target='_blank'
+                      class='text-[#F7B501] px-3 py-3 border border-[#F7B501] hover:bg-[#301F0C] rounded-[5px] fade-up delay-200'>
+                      <img class="w-[30px]" src="./images/telegram.png" alt="">
+                    </a>
+
+                    <a href="" target='_blank'
+                      class='text-[#F7B501] px-3 py-3 border border-[#F7B501] hover:bg-[#301F0C] rounded-[5px] fade-up delay-300'>
+                      <img class="w-[30px]" src="./images/github.png" alt="">
+                    </a>
+                  </div>
+                </div>
+
+                <div class='flex flex-col space-y-5 mt-10'>
+                  <button
+                    class='bg-[#FBA32C] hover:bg-transparent border border-[#FBA32C] text-[#1E1510] hover:text-[#FBA32C] font-passeroOne lg:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] px-[23px] py-[11.5px] duration-300 fade-up delay-700'>BUY
+                    ON OKX</button>
+
+                  <button
+                    class='border border-[#FBA32C] hover:bg-[#FBA32C] text-[#FBA32C] hover:text-[#1E1510] font-passeroOne lg:text-[20px] lg:leading-[32px] lg:tracking-[0.4px] rounded-[8px] px-[24px] py-[12px] duration-300 fade-up delay-1000'>TOTALL
+                    SUPPLY</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        <!------------------------ Footer Section  ------------------------------------->
+        <div class='bg-[#FBA32C]' id='contract'>
+          <div class="max-w-[1600px] mx-auto xl:px-24 lg:px-16 md:px-10 sm:px-2 px-4">
+            <!-- second part footer -->
+            <div
+              class='flex flex-col md:flex-row justify-center md:justify-between items-center py-[20px] md:py-[33px]'>
+
+              <div class='flex items-center gap-[40px]'>
+                <p class='text-[#1E1510] font-passeroOne lg:text-[20px] leading-[36px] uppercase'>loffar frog © 2024</p>
+                <p class='text-[#1E1510] font-passeroOne lg:text-[20px] leading-[36px] uppercase cursor-pointer'>
+                  hi@loffar frog.com</p>
+              </div>
+
+              <div>
+                <p class='text-[#1E1510] font-passeroOne lg:text-[20px] leading-[32px] uppercase'>© 2023 , KINGDOM OF
+                  KEK, All Rights Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+
+
+
+
+  <script>
+    // Hamburger menu
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      var menuIcon = document.querySelector(".text-3xl img");
+
+      // Toggle menu visibility
+      menu.classList.toggle("opacity-0");
+      menu.classList.toggle("md:opacity-100");
+      menu.classList.toggle("top-[-490px]");
+      menu.classList.toggle("md:static");
+      menu.classList.toggle("md:z-auto");
+      menu.classList.toggle("z-[-1px]");
+      menu.classList.toggle("mt-14");
+      menu.classList.toggle("bg-[#da9f52]");
+
+      // Change menu icon
+      if (menu.classList.contains("opacity-0")) {
+        menuIcon.src = "/images/menu.png";
+      } else {
+        menuIcon.src = "/images/close.png";
+      }
+    }
+
+
+
+    // Smooth section scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuItems = document.querySelectorAll('.menu-item');
+
+      menuItems.forEach(function (item) {
+        item.addEventListener('click', function (event) {
+          event.preventDefault();
+          var targetId = this.getAttribute('href');
+          var targetSection = document.querySelector(targetId);
+
+          // Scroll to the target section smoothly
+          targetSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+
+
+
+    // Banner copy icon
+    const bannerCopyButton = document.getElementById('bannerCopyButton');
+    const bannerCopyIcon = document.getElementById('bannerCopyIcon');
+    const bannerCopyIconPath = document.getElementById('bannerCopyIconPath');
+
+    let bannerCopied = false;
+
+    const bannerCopyLink = () => {
+      if (!bannerCopied) {
+        navigator.clipboard.writeText('CA: 0xaa86d4542969389b57936be83e5c888de001a95e').then(() => {
+          // alert('Copied!');
+          bannerCopied = true;
+
+          setTimeout(() => {
+            bannerCopied = false;
+            bannerCopyIconPath.setAttribute('d', 'M26.6687 12.0022H14.6687C13.196 12.0022 12.0021 13.1961 12.0021 14.6689V26.6689C12.0021 28.1416 13.196 29.3355 14.6687 29.3355H26.6687C28.1415 29.3355 29.3354 28.1416 29.3354 26.6689V14.6689C29.3354 13.1961 28.1415 12.0022 26.6687 12.0022Z');
+            bannerCopyIcon.classList.remove('text-[#FBBF24]');
+            bannerCopyIcon.classList.add('text-[#FBA32C]');
+          }, 2000);
+        });
+      }
+    };
+
+    bannerCopyButton.addEventListener('click', () => {
+      bannerCopyLink();
+      bannerCopyIconPath.setAttribute('d', 'M5 13l4 4L19 7');
+      bannerCopyIcon.classList.remove('text-[#FBA32C]');
+      bannerCopyIcon.classList.add('text-[#FBBF24]');
+    });
+
+
+
+
+    // Tokenomics copy icon
+    const copyButton = document.getElementById('copyButton');
+    const copyIcon = document.getElementById('copyIcon');
+    const copyIconPath = document.getElementById('copyIconPath');
+
+    let copied = false;
+
+    const copyLink = () => {
+      if (!copied) {
+        navigator.clipboard.writeText('CA: 0xaa86d4542969389b57936be83e5c888de001a95e').then(() => {
+          // alert('Copied!');
+          copied = true;
+
+          setTimeout(() => {
+            copied = false;
+            copyIconPath.setAttribute('d', 'M26.6687 12.0022H14.6687C13.196 12.0022 12.0021 13.1961 12.0021 14.6689V26.6689C12.0021 28.1416 13.196 29.3355 14.6687 29.3355H26.6687C28.1415 29.3355 29.3354 28.1416 29.3354 26.6689V14.6689C29.3354 13.1961 28.1415 12.0022 26.6687 12.0022Z');
+            copyIcon.classList.remove('text-[#FBBF24]');
+            copyIcon.classList.add('text-[#FBA32C]');
+          }, 2000);
+        });
+      }
+    };
+
+    copyButton.addEventListener('click', () => {
+      copyLink();
+      copyIconPath.setAttribute('d', 'M5 13l4 4L19 7');
+      copyIcon.classList.remove('text-[#FBA32C]');
+      copyIcon.classList.add('text-[#FBBF24]');
+    });
+
+
+    // animation 
+    document.addEventListener("DOMContentLoaded", function (event) {
+      var fadeUpElements = document.querySelectorAll('.fade-up');
+
+      fadeUpElements.forEach(function (element) {
+        if (isElementInViewport(element)) {
+          element.classList.add('active');
+        } else {
+          window.addEventListener('scroll', function () {
+            if (isElementInViewport(element)) {
+              element.classList.add('active');
+            }
+          });
+        }
+      });
+
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    });
+
+
+  </script>
 </body>
+
 </html>

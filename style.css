@@ -1,6 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/panton-rust-heavy");
 @import url("https://fonts.googleapis.com/css2?family=Passero+One&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Reset styles */
 * {
    margin: 0;
@@ -12,14 +16,37 @@ body {
    background: #0f0906;
 }
 
-.PantonRustHeavy{
+.font-pantonRust {
    font-family: "Panton Rust Heavy";
 }
 
-.passeroOne {
+.font-passeroOne {
    font-family: "Passero One";
 }
 
 /* Navbar styles */
+.nav-links a.active,
+.nav-links a:hover {
+   color: #1E1510;
+   border: 1px solid #1d140f;
+   background-color: #fcb95f;
+}
+
+/* animation  */
+.fade-up {
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-up.active {
+   opacity: 1;
+   transform: translateY(0);
+}
 
 
+@media only screen and (max-width: 360px) {
+   .cusMargin {
+      margin-left: -20px;
+   }
+}
